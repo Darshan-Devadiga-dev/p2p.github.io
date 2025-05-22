@@ -14,7 +14,7 @@ app.config['MAX_CONTENT_LENGTH'] = 100 * 1024 * 1024  # 100MB
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
 # IMPORTANT: Use 'threading' to avoid file upload issues
-socketio = SocketIO(app, cors_allowed_origins="*", async_mode='threading')
+socketio = SocketIO(app, cors_allowed_origins=["https://cute-monstera-6eef17.netlify.app"], async_mode='threading')
 
 peers = {}
 
