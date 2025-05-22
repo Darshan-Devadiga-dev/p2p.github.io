@@ -1,9 +1,11 @@
 from flask import Flask, request, jsonify, send_file
+from flask_cors import CORS
 from flask_socketio import SocketIO, emit
 from werkzeug.utils import secure_filename
 import os
 
 app = Flask(__name__)
+CORS(app)
 app.config['SECRET_KEY'] = 'pairdrop-clone'
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['MAX_CONTENT_LENGTH'] = 100 * 1024 * 1024  # 100MB
